@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Manager Dashboard</title>
+  <link rel="stylesheet" href="global.css">
+</head>
+
+<body onload="protectPage(['manager']);">
+
+<div class="sidebar">
+  <h2>Manager</h2>
+  <a href="manager.html" class="active">Dashboard</a>
+  <a href="admindashboard.html">Admin</a>
+  <a href="staff.html">Staff</a>
+  <a href="#" onclick="logout()">Logout</a>
+</div>
+
+<div class="content" style="margin-left:240px; padding:20px;">
+
+  <h2>📦 Manager Dashboard</h2>
+
+  <div class="card">
+    <h3>Add Product</h3>
+    <select id="addProduct">
+      <option>BOOKS</option><option>TOYS</option><option>METALS</option>
+    </select>
+    <input type="number" id="addQty">
+    <button onclick="addProduct()">Add</button>
+    <div id="addMsg"></div>
+  </div>
+
+  <div class="card">
+    <h3>Sell Product</h3>
+    <select id="sellProduct">
+      <option>BOOKS</option><option>TOYS</option><option>METALS</option>
+    </select>
+    <input type="number" id="sellQty">
+    <button onclick="sellProduct()">Sell</button>
+    <div id="sellMsg"></div>
+  </div>
+
+  <div class="card">
+    <h3>Refill Stock</h3>
+    <select id="refillProduct">
+      <option>BOOKS</option><option>TOYS</option><option>METALS</option>
+    </select>
+    <input type="number" id="refillQty">
+    <button onclick="refillStock()">Refill</button>
+    <div id="refillMsg"></div>
+  </div>
+
+  <div class="card">
+    <h3>📊 Current Stock</h3>
+    <table>
+      <thead>
+        <tr><th>Product</th><th>Stock</th><th>Status</th></tr>
+      </thead>
+      <tbody id="stockTable"></tbody>
+    </table>
+  </div>
+
+</div>
+
+<script src="auth.js"></script>
+<script src="manager.js"></script>
+</body>
+</html>

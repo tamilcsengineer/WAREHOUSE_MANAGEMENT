@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Staff Dashboard</title>
+  <link rel="stylesheet" href="global.css">
+</head>
+
+<body onload="protectPage(['staff']);">
+
+<div class="sidebar">
+  <h2>Staff</h2>
+  <a href="staff.html" class="active">Sell</a>
+  <a href="#" onclick="logout()">Logout</a>
+</div>
+
+<div class="content" style="margin-left:240px; padding:20px;">
+
+  <h2>🧾 Staff Dashboard</h2>
+
+  <div class="card">
+    <h3>Sell Product</h3>
+    <select id="product">
+      <option>BOOKS</option><option>TOYS</option><option>METALS</option>
+    </select>
+    <input type="number" id="qty">
+    <button onclick="sell()">Sell</button>
+    <div id="msg"></div>
+  </div>
+
+  <div class="card">
+    <h3>📜 Sales History</h3>
+    <table>
+      <thead>
+        <tr><th>Product</th><th>Qty</th><th>Time</th></tr>
+      </thead>
+      <tbody id="logs"></tbody>
+    </table>
+  </div>
+
+</div>
+
+<script src="auth.js"></script>
+<script src="staff.js"></script>
+</body>
+</html>

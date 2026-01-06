@@ -1,0 +1,9 @@
+
+<script>
+const role = localStorage.getItem("userRole");
+
+if (role === "admin") location.href = "admindashboard.html";
+else if (role === "manager") location.href = "manager.html";
+else if (role === "staff") location.href = "staff.html";
+else location.href = "login.html";
+</script>

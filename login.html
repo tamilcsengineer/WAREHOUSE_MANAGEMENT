@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Warehouse Management System | Login</title>
+
+<style>
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  height: 100vh;
+  font-family: "Segoe UI", Arial, sans-serif;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: linear-gradient(135deg, #0a58ca, #4dabf7);
+}
+
+/* MAIN CARD */
+.login-card {
+  width: 1000px;
+  height: 520px;
+  background: #fff;
+  border-radius: 22px;
+  display: flex;
+  overflow: hidden;
+  box-shadow: 0 30px 60px rgba(0,0,0,0.25);
+}
+
+/* LEFT PANEL */
+.login-left {
+  width: 55%;
+  background: linear-gradient(180deg, #0b5ed7, #084298);
+  color: #fff;
+  padding: 60px 50px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.login-left h1 {
+  font-size: 34px;
+  margin-bottom: 15px;
+}
+
+.login-left p {
+  font-size: 15px;
+  line-height: 1.6;
+  opacity: 0.9;
+}
+
+.box-icon {
+  font-size: 64px;
+  margin-bottom: 20px;
+}
+
+/* RIGHT PANEL */
+.login-right {
+  width: 45%;
+  padding: 60px 50px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.login-right h2 {
+  margin: 0;
+  font-size: 26px;
+}
+
+.login-right span {
+  margin-top: 4px;
+  color: #666;
+  font-size: 14px;
+  margin-bottom: 25px;
+}
+
+.login-right input {
+  width: 100%;
+  padding: 14px;
+  margin-bottom: 15px;
+  border-radius: 12px;
+  border: 1px solid #dcdcdc;
+  font-size: 15px;
+}
+
+/* BUTTON */
+.login-btn {
+  margin-top: 10px;
+  padding: 14px;
+  border-radius: 12px;
+  background: #0b5ed7;
+  color: white;
+  font-size: 16px;
+  border: none;
+  cursor: pointer;
+}
+
+.login-btn:hover {
+  background: #084298;
+}
+
+.note {
+  margin-top: 18px;
+  font-size: 13px;
+  color: #777;
+  text-align: center;
+}
+</style>
+</head>
+
+<body>
+
+<div class="login-card">
+
+  <!-- LEFT -->
+  <div class="login-left">
+    <div class="box-icon">📦</div>
+    <h1>Warehouse<br>Management System</h1>
+    <p>
+      Manage inventory, monitor staff activity, track stock levels,
+      and ensure smooth warehouse operations in real time.
+    </p>
+  </div>
+
+  <!-- RIGHT -->
+  <div class="login-right">
+    <h2>Login</h2>
+    <span>Admin / Manager / Staff Access</span>
+
+    <input id="email" type="email" placeholder="Email Address">
+    <input id="password" type="password" placeholder="Password">
+
+    <button class="login-btn" onclick="login()">Login</button>
+
+    <div class="note">Authorized users only</div>
+  </div>
+
+</div>
+
+<script src="login.js"></script>
+</body>
+</html>
